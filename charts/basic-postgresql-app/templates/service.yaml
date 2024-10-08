@@ -10,5 +10,7 @@ spec:
     protocol: TCP
     port: {{ .Values.network.port }}
     targetPort: {{ .Values.network.port }}
+  selector:
+    deployment: {{ .Values.name }}-app
   sessionAffinity: None
   type: ClusterIP

@@ -2,4 +2,4 @@ apiVersion: v2
 name: basic-postgresql-app
 description: A Helm chart a basic kubernetes app with a postgresql database included
 type: application
-version: 1.0.1
+version: 1.0.2

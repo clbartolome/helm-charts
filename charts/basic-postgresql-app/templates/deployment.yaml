@@ -8,7 +8,10 @@ metadata:
 {{ include "labels.app" . | indent 4 }}
 spec:
   progressDeadlineSeconds: 600
-  replicas: {{ .Values.replicas }}
+  replicas: {{ .Values.replicas }}  
+  selector:
+    matchLabels:
+      deployment: {{ .Values.name }}-app
   revisionHistoryLimit: 10
   strategy:
     rollingUpdate:
@@ -17,10 +20,8 @@ spec:
     type: RollingUpdate
   template:
     metadata:
-      annotations:
-        sidecar.istio.io/inject: "true"
       labels:
-{{ include "labels.app" . | indent 8 }}
+        deployment: {{ .Values.name }}-app
     spec: 
       containers:
       - name: {{ .Values.name }}-app

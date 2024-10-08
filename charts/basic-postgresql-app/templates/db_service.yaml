@@ -10,5 +10,7 @@ spec:
     port: 5432
     protocol: TCP
     targetPort: 5432
+  selector:
+    deployment: {{ .Values.name }}-db
   sessionAffinity: None
   type: ClusterIP

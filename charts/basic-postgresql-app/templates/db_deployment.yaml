@@ -9,6 +9,9 @@ metadata:
 spec:
   progressDeadlineSeconds: 600
   replicas: 1
+  selector:
+    matchLabels:
+      deployment: {{ .Values.name }}-db
   revisionHistoryLimit: 10
   strategy:
     rollingUpdate:
@@ -18,7 +21,7 @@ spec:
   template:
     metadata:
       labels:
-{{ include "labels.db" . | indent 8 }}
+        deployment: {{ .Values.name }}-db
     spec: 
       containers:
       - name: {{ .Values.name }}-db
