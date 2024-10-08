@@ -14,6 +14,7 @@ Configuration [`values.yaml`]:
 
 ```yaml
 name: <app name>
+environment: <app environment>
 
 image:
   url: <application image url>

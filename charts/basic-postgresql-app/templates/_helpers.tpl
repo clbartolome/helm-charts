@@ -25,10 +25,12 @@ app.kubernetes.io/component: {{ .Values.name }}-app
 app.kubernetes.io/instance: {{ .Values.name }}-app
 app.kubernetes.io/part-of: {{ .Values.name }}
 app.openshift.io/runtime: quarkus
+environment: {{ .Values.environment }}
 {{- end -}}
 
 {{- define "labels.db" -}}
 app:  {{ .Values.name }}-db
 app.kubernetes.io/part-of:  {{ .Values.name }}
 app.openshift.io/runtime: postgresql
+environment: {{ .Values.environment }}
 {{- end -}}
