@@ -2,6 +2,15 @@ apiVersion: v1
 entries:
   basic-postgresql-app:
   - apiVersion: v2
+    created: "2024-10-08T14:01:48.269110851Z"
+    description: A Helm chart a basic kubernetes app with a postgresql database included
+    digest: 1cec501a41b831012f4913bde21c1d240b5e1c52f80b31fc66bb1293b1212f89
+    name: basic-postgresql-app
+    type: application
+    urls:
+    - https://github.com/clbartolome/helm-charts/releases/download/basic-postgresql-app-1.0.2/basic-postgresql-app-1.0.2.tgz
+    version: 1.0.2
+  - apiVersion: v2
     created: "2024-10-08T10:42:19.195344632Z"
     description: A Helm chart a basic kubernetes app with a postgresql database included
     digest: d9d5a61647879fee0bf6fb1aa37064cce91fc793db86686b7304b273e0eb5902
@@ -19,4 +28,4 @@ entries:
     urls:
     - https://github.com/clbartolome/helm-charts/releases/download/basic-postgresql-app-1.0.0/basic-postgresql-app-1.0.0.tgz
     version: 1.0.0
-generated: "2024-10-08T10:42:19.195351394Z"
+generated: "2024-10-08T14:01:48.269149074Z"
