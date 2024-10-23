@@ -31,6 +31,31 @@ helm delete my-<chart-name>
 
 ## Charts
 
+### basic
+
+A Helm chart with the minimum configuration for tutorials.
+
+Use this command to generate the template:
+```sh
+helm template . --set name=demo,port=8080,replicas=3,image=openshift/hello-openshift,routeEnabled=true
+```
+
+Configuration [`values.yaml`]:
+
+```yaml
+name: <app name>
+
+image: <application image url>:<application image version>
+
+replicas: <app replicas>
+
+port: <application port>
+
+routeEnabled: <boolean - create a route if true>
+```
+
+## Charts
+
 ### basic-postgresql-app
 
 > [!IMPORTANT]  
@@ -39,7 +64,7 @@ helm delete my-<chart-name>
 > - POSTGRESQL_PASSWORD
 > - POSTGRESQL_DATABASE
 
-A Helm chart a basic kubernetes app with a postgresql database included
+A Helm chart for basic kubernetes app with a postgresql database included
 
 Configuration [`values.yaml`]:
 
