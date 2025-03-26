@@ -10,6 +10,16 @@ entries:
     urls:
     - https://github.com/clbartolome/helm-charts/releases/download/basic-1.0.0/basic-1.0.0.tgz
     version: 1.0.0
+  basic-config:
+  - apiVersion: v2
+    created: "2025-03-26T16:50:24.089583264Z"
+    description: A Helm chart for a basic kubernetes app with configuration files
+    digest: 000c31d19f7de58be046c04e44ae90e461efeac4fe34d9cb5fa1adb9df132dc0
+    name: basic-config
+    type: application
+    urls:
+    - https://github.com/clbartolome/helm-charts/releases/download/basic-config-1.0.0/basic-config-1.0.0.tgz
+    version: 1.0.0
   basic-postgresql-app:
   - apiVersion: v2
     created: "2024-10-08T14:11:53.774318926Z"
@@ -47,4 +57,4 @@ entries:
     urls:
     - https://github.com/clbartolome/helm-charts/releases/download/basic-postgresql-app-1.0.0/basic-postgresql-app-1.0.0.tgz
     version: 1.0.0
-generated: "2024-10-23T15:58:03.922983751Z"
+generated: "2025-03-26T16:50:24.089599624Z"
