@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Values.name }}
+  labels:
+{{ include "labels" . | indent 4 }}
+spec:
+  replicas: {{ .Values.replicas }}
+  selector:
+    matchLabels:
+{{ include "labels" . | indent 6 }}
+  template:
+    metadata:
+      labels:
+{{ include "labels" . | indent 10 }}
+    spec:
+      containers:
+      - image: {{ .Values.image }}
+        name: {{ .Values.name }}
+        ports:
+        - containerPort: {{ .Values.port }}
+          protocol: TCP
+        {{- if and .Values.config.enabled .Values.config.data }}
+        envFrom:
+          - configMapRef:
+              name: {{ .Values.name }}-config
+        {{- end }}
+        {{- if and .Values.secret.enabled .Values.secret.data }}
+          - secretRef:
+              name: {{ .Values.name }}-secret
+        {{- end }}

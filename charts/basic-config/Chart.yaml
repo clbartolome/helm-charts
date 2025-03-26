@@ -1,0 +1,5 @@
+apiVersion: v2
+name: basic-config
+description: A Helm chart for a basic kubernetes app with configuration files
+type: application
+version: 1.0.0

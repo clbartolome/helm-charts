@@ -54,6 +54,39 @@ port: <application port>
 routeEnabled: <boolean - create a route if true>
 ```
 
+### basic-config
+
+A Helm chart with the minimum configuration for tutorials + configuration.
+
+Configuration [`values.yaml`]:
+
+```yaml
+name: <app name>
+
+image: <application image url>:<application image version>
+
+replicas: <app replicas>
+
+port: <application port>
+
+routeEnabled: <boolean - create a route if true>
+
+config:
+  enabled: true
+  data:
+    <KEY>: "<value>"
+
+secret:
+  enabled: true
+  data:
+    <KEY>: "<value>"
+```
+
+Use this command to generate the template:
+```sh
+helm template . -f values.yaml
+```
+
 ## Charts
 
 ### basic-postgresql-app
